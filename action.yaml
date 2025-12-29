@@ -1,0 +1,17 @@
+name: "Olympix BugPocer"
+description: "AI-powered vulnerability detection for Solidity smart contracts using BugPocer"
+branding:
+  icon: 'shield'
+  color: 'purple'
+inputs:
+  args:
+    description: "Arguments to customize BugPocer analysis"
+    default: --confirm-all
+runs:
+  using: "docker"
+  image: "docker://olympix/integrated-security:latest"
+  env:
+    OLYMPIX_INTEGRATION_ORIGIN: "gha"
+  args:
+  - start-bp-session
+  - ${{ inputs.args }}
