@@ -9,7 +9,7 @@ inputs:
     default: --confirm-all
 runs:
   using: "docker"
-  image: "docker://olympix/integrated-security:latest"
+  image: "docker://olympix/integrated-security:dev"
   env:
     OLYMPIX_INTEGRATION_ORIGIN: "gha"
   args:
