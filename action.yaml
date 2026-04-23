@@ -13,5 +13,5 @@ runs:
   env:
     OLYMPIX_INTEGRATION_ORIGIN: "gha"
   args:
-  - start-bp-session
+  - bug-pocer
   - ${{ inputs.args }}
